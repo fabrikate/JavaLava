@@ -1,0 +1,62 @@
+<script type="text/javascript">
+var guess, answer
+//Can you name the seven kingdoms of westeros?
+var welcome = confirm("Welcome ASOIF and GOT nerds. Here your Westeros knowledge will be put to the test... Can you name all Seven kingdoms of Westeros?");
+
+if (welcome){
+
+	guess_compare_answer = function(guess){
+		var kingdom_north = "North"
+		if (answer === kingdom_north){
+			alert("That's correct! Do you have some Stark heritage?");
+		}
+		else{
+			alert("Winter is coming and you have failed.");
+			console.log(guess);
+		}
+		var kingdom_vale = "Vale"
+		if (answer === kingdom_vale){
+			alert("Correct, clearly you have made the journey up the mountain to the Eyrie");
+		}else{
+			alert("Wrong, you are thrown out of the moon door.");
+		}
+		var kingdom_riverlands = "Riverlands"
+		if (answer === kingdom_riverlands){
+			alert("Yes, that's right. Swim on and be unharmed.");
+		}else{
+			alert("No, You decide to attend a wedding at the Frey's...and well you know what can happen at Frey weddings!");
+		}
+		var kingdom_rock = "Westerlands"
+		if (answer === kingdom_rock){
+			alert("Yes, you must have the cunning of Lan the clever.");
+		}else{
+			alert("No, thats wrong. A Lannister always pays their debts");
+		}
+		var kingdom_storm = "Stormlands"
+		if (answer === kingdom_storm){
+			alert("That's right! I see the foundation of your knowledge is as strong as Storm's End");
+		}else{
+			alert("No, thats wrong. Much like the former castles of Storm's End you crumple and fall.")
+		}
+		var kingdom_reach = "Reach"
+		if(answer === kingdom_reach){
+			alert("Yes! Your knowledge grows strong.");
+		}else{
+			alert("That answer is like the thorn on a Tyrell rose. Its hurts its so wrong.");
+		}
+		var kingdom_dorne = "Dorne"
+		if (answer === kingdom_dorne){
+			alert("Unbowed, Unbent, Unbroken: Your answer is right");
+		}else{
+			alert("Thats wrong. You're bit by a dornish viper.")
+		}
+	}
+
+guess = prompt("Name the largest kingdom of Westeros")
+guess_compare_answer(guess)
+
+}
+else{
+	alert("Whimp!")
+}
+</script>
