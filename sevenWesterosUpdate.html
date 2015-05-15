@@ -18,7 +18,41 @@
 
     <!-- Refreshing connection between warden families and their kingdoms -->
     <p>Need a refresher on the names of the kingdoms? Here is a hint, each kingdom has a warden. Connect between the family and the kingdom name to win!</p>
-    <p>If you watch the series you know the families. Below are some hints to refresh your memory</p>
+    <p>Don't think about the castle or city they live in, but the name of the land (kingdom)</p>
+
+    <!--Put event to have person start to play game here-->
+    <p><h3>Ready to put your nerdy knowledge to the test?</h3></p>
+    <ul id="gameStart">
+      <li id="northQuestion"></li>
+      <!--North-->
+      <form action=""><input type="text"; name="kingdomAnswer"; placeholder="Kingdom name"></form>
+      <button>Submit</button>
+      <!--Vale-->
+      <li id="valeQuestion"></li>
+      <form action=""><input type="text"; name="kingdomAnswer"; placeholder="Kingdom name"></form>
+      <button>Submit</button>
+      <!--Riverlands-->
+      <li id="riverlandsQuestion"></li>
+      <form action=""><input type="text"; name="kingdomAnswer"; placeholder="Kingdom name"></form>
+      <button>Submit</button>
+      <!--Westerlands-->
+      <li id="westerlandsQuestion"></li>
+      <form action=""><input type="text"; name="kingdomAnswer"; placeholder="Kingdom name"></form>
+      <button>Submit</button>
+      <!--Stormlands-->
+      <li id="stormlandsQuestion"></li>
+      <form action=""><input type="text"; name="kingdomAnswer"; placeholder="Kingdom name"></form>
+      <button>Submit</button>
+      <!--Reach-->
+      <li id="reachQuestion"></li>
+      <form action=""><input type="text"; name="kingdomAnswer"; placeholder="Kingdom name"></form>
+      <button>Submit</button>
+      <!--Dorne-->
+      <li id="dorneQuestion"></li>
+      <form action=""><input type="text"; name="kingdomAnswer"; placeholder="Kingdom name"></form>
+      <button>Submit</button>
+    </ul>
+
 
     <!-- List of the seven families with links to location of the image-->
     <ol><h4>The Seven Warden families.</h4>
@@ -68,10 +102,6 @@
         </tr>
       </tbody>
     </table>
-
-
-
-
     <p>Map image from <a href = "http://gameofthrones.wikia.com/wiki/Westeros">Game of Thrones Wikia</a></p>
   </body>
 </html>
@@ -79,6 +109,19 @@
 
 <script type="text/javascript">
 window.onload = function(){
+//var game = document.getElementById("gameStart"); //can move up
+//game.textContent = testing!!!;//userInput;
+
+var newText = document.createElement('li');
+var askQuestion = document.createTextNode("text test");
+newText.appendChild(askQuestion);
+var position = document.getElementById("northQuestion");
+position.appendChild(newText)
+
+//var getResponse = document.getElementById("answerResponse")
+//showCorrectResponse = getResponse.showTextContent=(kingdomArray.correctResponse[i])
+//showWrongResponse = getResponse.showTextContent=(kingdomArray.wrongResponse[i])
+
 welcome = confirm("Welcome ASOIF and GOT nerds. Here your Westeros knowledge will be put to the test... Can you name all Seven kingdoms of Westeros?");
 
 if (welcome){
@@ -92,8 +135,6 @@ if (welcome){
 
     }
   }
-
-  alert("Suggestion: Don't include 'The' when naming the kingdoms")
 
   var triviaAnswer = [
   "north",        //0
@@ -148,12 +189,17 @@ if (welcome){
       alert(kingdomArray[i].wrongResponse);
     }
   }
+
+
+
 }else{
       alert("Whimp!!")
     }
   }
 
 //Will S. helped with building constructor functions!
+
+//asking of question is a function that runs each time. set up 7 questions
 
 </script>
 
