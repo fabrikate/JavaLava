@@ -1,5 +1,83 @@
+<!DOCTYPEhtml>
+<html>
+  <head> <title>A Game of Ice and Fire</title>
+  </head>
+  <body>
+
+    <!--What the game is -->
+    <img src = "http://img2.wikia.nocookie.net/__cb20110314204946/gameofthrones/images/0/0f/HBO_Map_of_Westeros.jpg" alt "Map of Westeros" width="300" height="440" align ="right" title= "A Map of Westeros">
+    <p><h1>A Game of Ice and Fire</h1></p>
+
+    <p><h3>You've seen the show, you may have even read the books. Now test your nerdom in a Game of Ice and Fire!</h3></p>
+    <p>Inspired by George R. R. Martin's series <em>A Song of Ice and Fire</em>, play The Seven Kingdoms of Westeros!</p>
+
+    <!-- Refreshing connection between warden families and their kingdoms -->
+    <p>Need a refresher on the names of the kingdoms? Here is a hint, each kingdom has a warden. Connect between the family and the kingdom name to win!</p>
+    <p>If you watch the series you know the families. Below are some hints to refresh your memory</p>
+
+    <!-- List of the seven families with links to location of the image-->
+    <ol><h4>The Seven Warden families.</h4>
+
+      <li>The Starks</li>
+      <a href= "https://lh3.googleusercontent.com/fIr4TsPZ6diKC77l0JJFrwoH4iNNHkF-2fmU3yPmNBv0WvSSHL6eUlvJYIpbLvxQL7wtMRfMxA=s128-h128-e365">
+      <img src = "https://lh3.googleusercontent.com/fIr4TsPZ6diKC77l0JJFrwoH4iNNHkF-2fmU3yPmNBv0WvSSHL6eUlvJYIpbLvxQL7wtMRfMxA=s128-h128-e365" alt="Stark sigil"></a>
+
+      <li>The Arryns</li>
+      <a href = "http://img4.wikia.nocookie.net/__cb20140402114006/gameofthrones/images/6/62/House-Arryn-heraldry.jpg"><img src = "http://img4.wikia.nocookie.net/__cb20140402114006/gameofthrones/images/6/62/House-Arryn-heraldry.jpg" alt="Arryn sigil" width="128" height="128"></a>
+
+      <li>The Tullys</li>
+      <a href = "http://i48.tinypic.com/20staie.jpg"><img src = "http://i48.tinypic.com/20staie.jpg"  alt="Tully sigil"></a>
+
+      <li>The Lannisters</li>
+      <a href="http://img1.wikia.nocookie.net/__cb20140402110342/gameofthrones/images/0/0b/House-Lannister-heraldry.jpg"><img src="http://img1.wikia.nocookie.net/__cb20140402110342/gameofthrones/images/0/0b/House-Lannister-heraldry.jpg" alt="Lannister sigil" width="128" height="128"></a>
+
+      <li>The Baratheons</li>
+      <a href="http://img1.wikia.nocookie.net/__cb20110725114921/gameofthrones/images/1/11/Baratheon.JPG"><img src="http://img1.wikia.nocookie.net/__cb20110725114921/gameofthrones/images/1/11/Baratheon.JPG" alt="Baratheon sigil" width ="128" height "128"></a>
+
+      <li>The Tyrells</li>
+      <a href="http://www.songoficeandfiregroup.com/wp-content/uploads/2014/04/house_tyrell_by_liquidsouldesign-d467jau.jpg"><img src="http://www.songoficeandfiregroup.com/wp-content/uploads/2014/04/house_tyrell_by_liquidsouldesign-d467jau.jpg" alt="Tyrell sigil" width="128" height="128"></a>
+
+      <li>The Martells</li>
+      <a href="http://www.songoficeandfiregroup.com/wp-content/uploads/2014/04/house-martell-poster-485x750.jpg"><img src="http://www.songoficeandfiregroup.com/wp-content/uploads/2014/04/house-martell-poster-485x750.jpg" alt="Martell sigil" width="128" height="128"></a>
+    </ol>
+
+    <p></p>
+    <p><h3>Did you get them all right? Submit your name on the wall of game!</h3></p>
+    <form action="">
+      <p>Wall of Game champ:
+        <input type="text" name="Name" placeholder="Name" />
+      </p>
+    </form>
+
+    <table width="200" cellpadding="10" cellspacing="5" border="2">
+      <thead>
+        <tr>
+          <th width="50"><strong>Player Name</strong></td>
+          <th width="50"><stsrong>Score</strong></td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Kate</td>
+          <td>7</td>
+        </tr>
+      </tbody>
+    </table>
+
+
+
+
+    <p>Map image from <a href = "http://gameofthrones.wikia.com/wiki/Westeros">Game of Thrones Wikia</a></p>
+  </body>
+</html>
+
+
 <script type="text/javascript">
-  function Kingdom(name, question, correctResponse, wrongResponse) {
+window.onload = function(){
+welcome = confirm("Welcome ASOIF and GOT nerds. Here your Westeros knowledge will be put to the test... Can you name all Seven kingdoms of Westeros?");
+
+if (welcome){
+    function Kingdom(name, question, correctResponse, wrongResponse) {
     this.name = name;
     this.question = question;
     this.correctResponse = correctResponse;
@@ -9,6 +87,8 @@
 
     }
   }
+
+  alert("Suggestion: Don't include 'The' when naming the kingdoms")
 
   var triviaAnswer = [
   "north",        //0
@@ -24,9 +104,10 @@
   "Which mountain kingdom has the castle Eyrie?",
   "The warden of this kingdom has a fish as his sigil",
   "This prosperous kingdom houses the family that always pays their debts",
-  "This kingdom is known for its termultous weather and the Baratheon family",
+  "This kingdom is known for its tumultuous weather and the Baratheon family",
   "This kingdom houses the family whos words are 'Growing strong'",
   "This southern kingdom is mostly dessert and snakes."];
+
   var triviaCorrectResponse =
   ["That's correct! Do you have some Stark heritage?",    //North
   "Correct, clearly you have made the journey up the mountain to the Eyrie",  //Vale
@@ -35,6 +116,8 @@
   "That's right! I see the foundation of your knowledge is as strong as Storm's End",   //Stormlands
   "Yes! Your knowledge grows strong.",    //Reach
   "Unbowed, Unbent, Unbroken: Your answer is right"];   //Dorne
+
+
   var triviaWrongResponse = [
   "Winter is coming and you have failed.",
   "Wrong, you are thrown out of the moon door.",
@@ -60,18 +143,14 @@
       alert(kingdomArray[i].wrongResponse);
     }
   }
+}else{
+      alert("Whimp")
+    }
+  }
 
-
-  /*
-  kingdomArray.push(new Kingdom(triviaAnswer[0], trivia[0]));
-  kingdomArray.push(new Kingdom(triviaAnswer[1], trivia[1]));
-  kingdomArray.push(new Kingdom(triviaAnswer[2], trivia[2]));
-  kingdomArray.push(new Kingdom(triviaAnswer[3], trivia[3]));
-  kingdomArray.push(new Kingdom(triviaAnswer[4], trivia[4]));
-  kingdomArray.push(new Kingdom(triviaAnswer[5], trivia[5]));
-  kingdomArray.push(new Kingdom(triviaAnswer[6], trivia[6]));
-  */
+//Will S. helped with building constructor functions!
 </script>
+
 
 
 
