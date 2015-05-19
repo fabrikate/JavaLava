@@ -1,4 +1,26 @@
+<html>
+<body>
+<input>
+  <label id="lblQ"></label><input id="restxt" type="text"><button id="btnRes">A</button><label id="lblR"></label>
+</main>
 <script type="text/javascript">
+  var question = document.getElementById('lblQ');
+  var respond = document.getElementById('lblR');
+  var restxt = document.getElementById('restxt');
+  var btnRes = document.getElementById('btnRes');
+  var questCount = 0;
+
+  btnRes.addEventListener('click', function(){
+    if(kingdomArray[questCount].comparison(restxt.value)) {
+      respond.innerHTML = kingdomArray[questCount].correctResponse;
+    } else {
+      respond.innerHTML = kingdomArray[questCount].wrongResponse;
+    }
+    questCount = questCount + 1;
+    if(questCount > 6) questCount = 0;
+    question.innerHTML = kingdomArray[questCount].question;
+  });
+
   function Kingdom(name, question, correctResponse, wrongResponse) {
     this.name = name;
     this.question = question;
@@ -52,14 +74,16 @@
     j++;
   }
 
-  for(i = 0; i < 7; i++ ) {
-    var userInput = prompt(kingdomArray[i].question).toLowerCase();
-    if(kingdomArray[i].comparison(userInput)) {
-      alert(kingdomArray[i].correctResponse);
-    } else {
-      alert(kingdomArray[i].wrongResponse);
-    }
-  }
+//  for(i = 0; i < 7; i++ ) {
+//    var userInput = prompt(kingdomArray[i].question).toLowerCase();
+//    if(kingdomArray[i].comparison(userInput)) {
+//      alert(kingdomArray[i].correctResponse);
+//    } else {
+//      alert(kingdomArray[i].wrongResponse);
+//    }
+//  }
+
+  question.innerHTML = kingdomArray[questCount].question;
 
 
   /*
@@ -72,7 +96,8 @@
   kingdomArray.push(new Kingdom(triviaAnswer[6], trivia[6]));
   */
 </script>
-
+</body>
+</html>
 
 
 
